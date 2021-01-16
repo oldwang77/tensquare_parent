@@ -24,6 +24,7 @@
         <module>tensquare_manager</module>
         <module>tensquare_web</module>
         <module>tensquare_common</module>
+        <module>tensquare_base</module>
     </modules>
     <packaging>pom</packaging>
 
