@@ -33,6 +33,11 @@ public class SpitController {
         return new Result(true, StatusCode.OK, "查询成功", spitService.findById(spitId));
     }
 
+    /**
+     * 添加吐槽
+     * @param spit
+     * @return
+     */
     @RequestMapping(method = RequestMethod.POST)
     public Result save(@RequestBody Spit spit) {
         spitService.save(spit);

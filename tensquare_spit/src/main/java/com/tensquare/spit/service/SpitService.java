@@ -38,6 +38,10 @@ public class SpitService {
         return spitDao.findById(id).get();
     }
 
+    /**
+     * 添加吐槽
+     * @param spit
+     */
     public void save(Spit spit){
         spit.set_id(idWorker.nextId()+"");
         spit.setPublishtime(new Date());        // 发布日期
@@ -47,7 +51,7 @@ public class SpitService {
         spit.setComment(0);     // 回复数
         spit.setState("1");     // 状态
 
-        // 如果当前的吐槽有父节点，那么父节点加一
+        // 如果当前的吐槽有父节点，那么父节点的回复数加一
         if (spit.getParentid() != null && !"".equals(spit.getParentid())) {
             Query query = new Query();
             query.addCriteria(Criteria.where("_id").is(spit.getParentid()));
