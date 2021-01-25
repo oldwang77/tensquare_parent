@@ -1,4 +1,4 @@
-package com.tensquare.pojo;
+package com.tensquare.search.pojo;
 
 
 import org.springframework.data.annotation.Id;
@@ -19,6 +19,8 @@ public class Article implements Serializable {
     //是否索引，就是看该域是否能被搜索
     //是否分词，就表示搜索的时候是整体匹配还是单词匹配
     //是否存储，就是是否在页面上显示
+
+    // 存的时候用IK分词器存，分的时候用IK分词器分
     @Field(index=true,analyzer = "ik_max_word",searchAnalyzer = "ik_max_word")
     private String title;
 
