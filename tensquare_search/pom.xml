@@ -21,6 +21,6 @@
             <artifactId>spring-data-elasticsearch</artifactId>
             <version>3.1.9.RELEASE</version>
         </dependency>
-    </dependencies>
 
+    </dependencies>
 </project>

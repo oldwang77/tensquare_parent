@@ -8,7 +8,7 @@ import util.IdWorker;
 @SpringBootApplication
 public class SearchApplication {
     public static void main(String[] args) {
-        SpringApplication.run(SpringApplication.class);
+        SpringApplication.run(SearchApplication.class,args);
     }
 
     @Bean
